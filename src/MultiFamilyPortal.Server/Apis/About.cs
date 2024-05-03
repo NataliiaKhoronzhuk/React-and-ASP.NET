@@ -15,7 +15,6 @@ public static class About
     public static WebApplication MapAbout(this WebApplication app)
     {
         var aboutGroup = app.MapGroup("/api/about");
-        aboutGroup.MapGet("/", GetHighlightedUsers);
         aboutGroup.MapGet("/profile/{firsName}/{lastName}", GetUserProfile);
         aboutGroup.MapGet("/profile/vcard/{userId}", DownloadVCard);
 
